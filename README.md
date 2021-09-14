@@ -15,7 +15,8 @@ Platform Projects with Javascript Vanilla.
 - [Instance OF](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
 - [New Keyword in JS](https://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript)
 - [Keyword Two](https://www.liip.ch/en/blog/why-i-dont-use-the-javascript-new-keyword)
-- [Function Prototype call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- [Function Prototype_call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- [Object_create](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill)
 
 # MIT LICENSE
 
