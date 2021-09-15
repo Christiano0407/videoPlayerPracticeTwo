@@ -1,5 +1,6 @@
 console.group("Color Project");
 // Variables >>>>
+// 1)
 const colors = [
   "green",
   "red",
@@ -14,6 +15,7 @@ const btn = document.getElementById(`btn`);
 const color = document.querySelector(`.color`);
 
 // events and functions >>>>
+//2)
 btn.addEventListener(`click`, function () {
   //console.log(document.body);
   // get random number between 0 - 3 colors[3];
@@ -27,6 +29,7 @@ btn.addEventListener(`click`, function () {
 
 //> random number >
 // Math.floor => Traer el numero entero / Random => 0 a 1 / length => cantidad de elementos >>>>>>>>
+//3)
 function getRandomNumber() {
   return Math.floor(Math.random() * colors.length);
 }
