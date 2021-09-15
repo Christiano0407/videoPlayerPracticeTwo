@@ -1,3 +1,3 @@
 console.group("Counter");
 
-console.group();
+console.groupEnd();
