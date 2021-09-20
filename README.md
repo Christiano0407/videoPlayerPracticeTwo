@@ -18,8 +18,17 @@ Platform Projects with Javascript Vanilla.
 - [Function Prototype_call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 - [Object_create](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill)
 
-# Token Github 
+# Build Javascript Projects
+
+- [Build Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=2651s)
+
+# Token Github
+
 - [video](https://www.youtube.com/watch?v=hlYkxZrdeBI)
+
+# Slider Javascript Product
+
+- [Slider Javascript](https://www.youtube.com/watch?v=LPBGK1gqXoU&t=8s)
 
 # MIT LICENSE
 
