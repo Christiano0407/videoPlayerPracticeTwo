@@ -1,3 +1,4 @@
-console.log("Clousure");
+console.log("Clousure and scoupe");
+// Alcance >
 
 console.groupEnd();
