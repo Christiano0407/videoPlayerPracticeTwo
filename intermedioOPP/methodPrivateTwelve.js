@@ -46,29 +46,6 @@ function requiredParam(param) {
 function LearningPath({ name = requiredParam("name"), courses = [] }) {
   this.name = name;
   this.courses = courses;
-
-  // const private = {
-  //   "_name": name,
-  //   "_courses": courses,
-  // };
-
-  // const public = {
-  //   get name() {
-  //     return private["_name"];
-  //   },
-  //   set name(newName) {
-  //     if (newName.length != 0) {
-  //       private["_name"] = newName;
-  //     } else {
-  //       console.warn("Tu nombre debe tener al menos 1 caracter");
-  //     }
-  //   },
-  //   get courses() {
-  //     return private["_courses"];
-  //   },
-  // };
-
-  // return public;
 }
 
 function Student({
