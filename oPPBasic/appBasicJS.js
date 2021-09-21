@@ -69,7 +69,17 @@ function gamer(name, age) {
   this.name = name;
   this.age = age;
 }
-gamer.prototype.nation = "Americana";
+
+// <Change the Prototype to a New Object  >
+gamer.prototype = {
+  nation: "Americana",
+  eat: function () {
+    console.log("Tacos");
+  },
+  describe: function () {
+    console.log(`Hi! my name is: ${this.name}`);
+  },
+};
 
 let gamers = new gamer("Luisa", 21);
 console.log(gamers);
@@ -89,7 +99,7 @@ console.log(ownsProps);
 console.log(Object.keys(ownsProps));
 console.log(prototypeProps);
 console.log(Object.keys(prototypeProps));
-
-// <<<============ Change the Prototype to a New Object ============================== >
+//> Understand Where an Object’s Prototype Comes From>>
+console.log(gamer.prototype.isPrototypeOf(gamers));
 
 console.groupEnd();
