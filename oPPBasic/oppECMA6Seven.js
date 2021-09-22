@@ -200,33 +200,29 @@ const chris = new Student({
 });
 
 //>>>>> Invocar >
-// > New students
+// > New students>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 console.log(edith);
 console.log(chris);
-//> escuelas
+//> escuelas >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 console.log(escuelaWeb);
 console.log(escuelaData);
 console.log(escuelaMarketing);
-//> cursos
+//> cursos >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 console.log(courseProgBasic);
 console.log(courseDefiniteProgBasic);
 console.log(coursePracticeProg);
-//> classes
+//> classes >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 console.log(classTwo);
-// > Getters y Setters
+// > Getters y Setters >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //courseProgBasic.name = "Curso Inicio Programación Básica";
 //courseProgBasic.name = "Curso Frontend";
 console.log(courseProgBasic);
-//>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //classOne.name = "Clases Inicio Frontend";
 console.log(classOne);
-//> Modules>>
+//> Modules>> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 peopleVideo.reproducir();
 peopleVideo.pause();
-
-peopleVideo.reproducir();
-peopleVideo.pause();
-
 console.log(peopleVideo);
 
 console.groupEnd();
