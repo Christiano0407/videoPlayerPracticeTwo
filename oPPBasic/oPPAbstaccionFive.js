@@ -1,6 +1,6 @@
 console.group("Abstraction");
-// Repaso Abstracción =================>
-// Atraer / abstracción de datos para crear uno nuevo ===>
+// (1) Repaso Abstracción =================>
+// Atraer / abstracción de datos para crear uno nuevo ===> clases, escuelas y cursos>>>>
 
 // << Class or Prototype >>
 // (C)
