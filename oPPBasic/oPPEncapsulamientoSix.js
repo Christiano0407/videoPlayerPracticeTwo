@@ -14,6 +14,18 @@ class AllClass {
     this.all = all;
   }
   // (E)
+  // Getters and Setters son Métodos ==>
+  get name() {
+    return this._name;
+  }
+
+  set name(newNameClass) {
+    if (newNameClass === "Clases Inicio Frontend") {
+      console.warn("Error Web...no!");
+    } else {
+      this._name = newNameClass;
+    }
+  }
 }
 
 // (D)
@@ -187,10 +199,12 @@ console.log(courseProgBasic);
 console.log(courseDefiniteProgBasic);
 console.log(coursePracticeProg);
 //> classes
-console.log(classOne);
+console.log(classTwo);
 // > Getters y Setters
-courseProgBasic.name = "Curso Inicio Programación Básica";
+//courseProgBasic.name = "Curso Inicio Programación Básica";
 //courseProgBasic.name = "Curso Frontend";
 console.log(courseProgBasic);
-
+//>>
+//classOne.name = "Clases Inicio Frontend";
+console.log(classOne);
 console.groupEnd();
