@@ -3,6 +3,51 @@ console.group("Abstraction");
 // Atraer / abstracción de datos para crear uno nuevo ===>
 
 // << Class or Prototype >>
+// (C)
+class AllClass {
+  constructor({ name, all = [] }) {
+    this.name = name;
+    this.all = all;
+  }
+}
+
+// (D)
+const classOne = new AllClass({
+  name: "Clases de HTML",
+  all: [
+    "Clase Básica de HTML",
+    "Clase de HTML y el DOM",
+    "Clase de HTML y etiquetas",
+    "Clase de HTML y componentes",
+  ],
+});
+
+const classTwo = new AllClass({
+  name: "Clases de CSS",
+  all: [
+    "Clase básica de CSS",
+    "Clase de CSS y componentes",
+    "clases de CSS Grid y Flex",
+  ],
+});
+
+const classThree = new AllClass({
+  name: "Clases de Javascript",
+  all: [
+    "Clase de introducción a Javascript",
+    "Clase de proyectos con Javascript",
+    "Clase de Frameworks para Javascript",
+  ],
+});
+
+const classFour = new AllClass({
+  name: "Comprender el futuro con React Native, Python, Bases de Datos y, Ciberseguridad.",
+  all: [
+    "Clase introducción sobre ReactJs y React Native",
+    "Clase sobre la IA, y Python",
+    "Clase sobre ciberseguridad, y tu bases de datos",
+  ],
+});
 
 // (C)
 class Course {
@@ -15,14 +60,17 @@ class Course {
 // (D)
 const courseProgBasic = new Course({
   name: "Curso de Programación Básica",
+  classes: [classOne],
 });
 
 const courseDefiniteProgBasic = new Course({
   name: "Curso Definitivo de HTML, CSS, Javascript y,  NodeJs",
+  classes: [classOne, classTwo, classThree],
 });
 
 const coursePracticeProg = new Course({
   name: "Curso práctico de Programación Frontend",
+  classes: [classOne, classTwo, classThree, classFour],
 });
 
 //(C) Agregar >
@@ -77,6 +125,7 @@ class Student {
     youtube,
     approvedCourse = [],
     learningPath = [],
+    allClass = [],
   }) {
     this.name = name;
     this.email = email;
@@ -85,6 +134,7 @@ class Student {
 
     this.approvedCourse = Course;
     this.learningPath = learningPath;
+    this.allClass = allClass;
   }
   // Methods / Métodos >>>
 }
@@ -116,5 +166,7 @@ console.log(escuelaMarketing);
 console.log(courseProgBasic);
 console.log(courseDefiniteProgBasic);
 console.log(coursePracticeProg);
+//> classes
+console.log(classOne);
 
 console.groupEnd();
