@@ -79,11 +79,13 @@ const classFour = new AllClass({
   ],
 });
 
-// (C)
+// (C) 7 (G) = Agregamos: isFree y lang ==>
 class Course {
-  constructor({ name, classes = [] }) {
+  constructor({ name, classes = [], isFree = false, lang = "spanish" }) {
     this._name = name;
     this.classes = classes;
+    this.isFree = isFree;
+    this.lang = lang;
   }
   //(E)
   // Condición al Acceso >>
@@ -106,6 +108,8 @@ class Course {
 const courseProgBasic = new Course({
   name: "Curso de Programación Básica",
   classes: [classOne],
+  // (G)
+  isFree: true,
 });
 
 const courseDefiniteProgBasic = new Course({
@@ -116,6 +120,8 @@ const courseDefiniteProgBasic = new Course({
 const coursePracticeProg = new Course({
   name: "Curso práctico de Programación Frontend",
   classes: [classOne, classTwo, classThree, classFour],
+  // (G)
+  lang: "english",
 });
 
 //(C) Agregar >
@@ -184,6 +190,62 @@ class Student {
   // Methods / Métodos >>>
 }
 
+// >>> Herencia <<<
+// (G)
+
+/* import { FreeStudent } from "../oPPBasic/oPPHerenciaNine.js"; */
+/*  */
+/* import { BasicStudent } from "../oPPBasic/oPPHerenciaNine.js"; */
+/*  */
+/* import { ExpertStudent } from "../oPPBasic/oPPHerenciaNine.js"; */
+
+// Nuevas Instancias de OBJETO >>>>> No sólo va existir Student (madre)>>>>>>>>
+class FreeStudent extends Student {
+  constructor(props) {
+    // Validar
+    super(props); // Referenciar al constructor de nuestra "Madre >> Student" ==>
+  }
+  // methods ==>
+  approved(newCourse) {
+    // Validar >>
+    // propiedad => isFree>
+
+    if (newCourse.isFree) {
+      this.approvedCourse.push(newCourse);
+    } else {
+      console.warn(
+        "Lo sentimos mucho, " +
+          this.name +
+          ", no puedes acceder a éste curso. Sólo es para planes Expert y Plus"
+      );
+    }
+  }
+}
+
+class BasicStudent extends Student {
+  constructor(props) {
+    super(props);
+    // props => parámetros >
+  }
+  // Methods => Nuevo método >
+  approved(newCourse) {
+    if (newCourse.lang !== "english") {
+      this.approvedCourse.push(newCourse);
+    } else {
+      console.warn("Lo siento" + this.name + " Sólo es para Plus");
+    }
+  }
+}
+class ExpertStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+  // Methods =>
+  approved(newCourse) {
+    this.approvedCourse.push(newCourse);
+  }
+}
+
 //>>>>> Instancias (Object o Array) >
 // (B) nuevos>
 const edith = new Student({
@@ -196,6 +258,23 @@ const edith = new Student({
 const chris = new Student({
   name: "Chris",
   userName: "Capitan",
+  learningPath: [escuelaData, escuelaMarketing, escuelaWeb],
+});
+
+// Nuevas Instancias ==>>
+// (G)
+
+const alejandra = new FreeStudent({
+  name: "Alejandra",
+  email: "edith@gmail.com",
+  userName: "Alexa",
+  learningPath: [escuelaMarketing, escuelaWeb],
+});
+
+const rodrigo = new ExpertStudent({
+  name: "Rodrigo",
+  email: "Rodri@gmail.com",
+  userName: "Guero",
   learningPath: [escuelaData, escuelaMarketing, escuelaWeb],
 });
 
@@ -224,5 +303,13 @@ console.log(classOne);
 peopleVideo.reproducir();
 peopleVideo.pause();
 console.log(peopleVideo);
+// >> HERENCIAS ====================================================>
+console.log(FreeStudent);
+console.log(alejandra);
+alejandra.approvedCourse = "CourseProgBasic";
+console.log(alejandra.approvedCourse);
+
+console.log(rodrigo);
+rodrigo.approvedCourse = "coursePracticeProg";
 
 console.groupEnd();
