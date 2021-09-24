@@ -1,7 +1,10 @@
 console.group("ECMA Script 6");
 // ==> >> MODULES JAVASCRIPT>>
-
 // =====================================================================================>>>
+
+// (H)
+//Polimorfismo >===>
+import { Comment } from "./oPPPolimorfismoTen.js";
 
 // (f)
 // MODULES>>>
@@ -311,5 +314,8 @@ console.log(alejandra.approvedCourse);
 
 console.log(rodrigo);
 rodrigo.approvedCourse = "coursePracticeProg";
+// =======================================================================>
+// POLIMORFISMO >>>
+console.log(Comment);
 
 console.groupEnd();
