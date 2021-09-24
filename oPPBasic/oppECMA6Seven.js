@@ -22,7 +22,7 @@ class Comment {
   // Método Publicar >>
   publicar() {
     console.log(this.studentName + " (" + this.studentRole + ")");
-    //console.log(this.studentName + " " + this.studentRole);
+    //console.log(`${this.studentName} ${this.studentRole}`);
     console.log(this.likes + "likes");
     console.log(this.content);
   }
@@ -383,9 +383,6 @@ rodrigo.approvedCourse = "coursePracticeProg";
 console.log(Comment);
 console.log(TeacherStudent);
 console.log(freddy);
-freddy.publicarComentario("Es un curso muy completo");
-
-alejandra.publicarComentario("Me encantó el curso");
-console.log(alejandra);
+freddy.publicarComentario("Me encantó un curso. ");
 
 console.groupEnd();
