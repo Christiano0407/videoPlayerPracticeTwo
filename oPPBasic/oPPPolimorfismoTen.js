@@ -22,9 +22,9 @@ export class Comment {
   // < Methods >
   // Método Publicar >>
   publicar() {
-    console.log(`Nombre: ${this.studentName}, Role: ${this.studentRole}`);
-    console.log(`${this.likes} likes`);
-    console.log(`${this.content}`);
+    console.log(this.studentName + " (" + this.studentRole + ")");
+    console.log(this.likes + "likes");
+    console.log(this.content);
   }
 }
 

@@ -4,7 +4,29 @@ console.group("ECMA Script 6");
 
 // (H)
 //Polimorfismo >===>
-import { Comment } from "./oPPPolimorfismoTen.js";
+//import { Comment } from "./oPPPolimorfismoTen.js";
+
+class Comment {
+  cosntructor({
+    // Propiedades ( props)>>
+    content,
+    studentName,
+    studentRole = "estudiante",
+  }) {
+    this.content = content;
+    this.studentName = studentName;
+    this.studentRole = studentRole;
+    this.likes = 0;
+  }
+  // < Methods >
+  // Método Publicar >>
+  publicar() {
+    console.log(this.studentName + " (" + this.studentRole + ")");
+    //console.log(this.studentName + " " + this.studentRole);
+    console.log(this.likes + "likes");
+    console.log(this.content);
+  }
+}
 
 // (f)
 // MODULES>>>
@@ -191,6 +213,16 @@ class Student {
     this.allClass = allClass;
   }
   // Methods / Métodos >>>
+  // << (H) crear un método >>
+  publicarComentario(commentContent) {
+    // < Estancia del comentario >
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name,
+    });
+    // < Publicar comentario / Método >
+    comment.publicar();
+  }
 }
 
 // >>> Herencia <<<
@@ -249,6 +281,29 @@ class ExpertStudent extends Student {
   }
 }
 
+// (H) Nuevo Esrudiante con comentarios >>
+// (H) >>>
+class TeacherStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+  // Methods >>>
+  approvedCourse(newCourse) {
+    this.approvedCourse.push(newCourse);
+  }
+  //comment >> Agregar el método de Student >
+  publicarComentario(commentContent) {
+    // < Estancia del comentario >
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name,
+      studentRole: "Profesor",
+    });
+    // < Publicar comentario / Método >
+    comment.publicar();
+  }
+}
+
 //>>>>> Instancias (Object o Array) >
 // (B) nuevos>
 const edith = new Student({
@@ -279,6 +334,15 @@ const rodrigo = new ExpertStudent({
   email: "Rodri@gmail.com",
   userName: "Guero",
   learningPath: [escuelaData, escuelaMarketing, escuelaWeb],
+});
+
+// (H)
+// Nuevo comentario >>
+const freddy = new TeacherStudent({
+  name: "Freddy Vega",
+  email: "freddyOne@gmail.com",
+  userName: "CEOFreddy",
+  instagram: "freddieVega",
 });
 
 //>>>>> Invocar >
@@ -317,5 +381,11 @@ rodrigo.approvedCourse = "coursePracticeProg";
 // =======================================================================>
 // POLIMORFISMO >>>
 console.log(Comment);
+console.log(TeacherStudent);
+console.log(freddy);
+freddy.publicarComentario("Es un curso muy completo");
+
+alejandra.publicarComentario("Me encantó el curso");
+console.log(alejandra);
 
 console.groupEnd();
