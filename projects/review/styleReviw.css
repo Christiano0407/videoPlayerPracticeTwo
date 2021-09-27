@@ -130,7 +130,7 @@ main {
 }
 /*Article*/
 .review {
-  border: 4px solid red;
+  /*  border: 4px solid red; */
   background: var(--clr-white);
   padding: 1.5rem 2rem;
   border-radius: var(--radius);
@@ -214,4 +214,38 @@ figure {
   letter-spacing: 0.1rem;
   color: #222;
   filter: opacity(0.5);
+}
+.prev-btn,
+.next-btn {
+  color: var(--clr-primary-8);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--clr-primary-5);
+}
+/*Button*/
+.random-btn {
+  margin-top: 0.5rem;
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-color: var(--clr-primary-5);
+  cursor: pointer;
+  outline: none;
+}
+.random-btn:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}
+.random-btn.active {
+  transform: scale(0.9);
 }
