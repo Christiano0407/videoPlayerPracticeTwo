@@ -21,6 +21,8 @@ Platform Projects with Javascript Vanilla.
 # Build Javascript Projects
 
 - [Build Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=2651s)
+  > Resources
+- [Cloudinary](https://cloudinary.com/)
 
 # Token Github
 
