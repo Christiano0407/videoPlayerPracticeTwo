@@ -52,5 +52,59 @@ let currentItem = 0;
 
 // (D)
 // load initial item / Events and Functions ==>>>>>>>>
+window.addEventListener("DOMContentLoaded", function () {
+  // Clave >>
+  const item = reviews[currentItem];
+  // Tomar toda la info del array>>
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+});
+
+// (E)
+// show person based on item>>
+showPerson = (person) => {
+  const item = reviews[person];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+};
+
+// (F)
+// show next person / Events ====>
+nextBtn.addEventListener("click", function () {
+  // Más, más
+  currentItem++;
+
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  // Call Function >
+  showPerson(currentItem);
+});
+
+// show prev person
+prevBtn.addEventListener("click", function () {
+  /* console.log("Previous"); */
+  // Menos, menos
+  currentItem--;
+
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  // Call Function >
+  showPerson(currentItem);
+});
+
+// show random person >>>>
+randomBtn.addEventListener("click", function () {
+  console.log("Hello");
+  // Números de 0 a 1 por la cantidad de datos>>>
+  currentItem = Math.floor(Math.random() * reviews.length);
+
+  showPerson(currentItem);
+});
 
 console.groupEnd();
