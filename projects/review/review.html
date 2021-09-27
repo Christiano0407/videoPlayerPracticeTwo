@@ -4,10 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/projects/review/assets/elementor-brands.svg"
+      type="image/png"
+    />
     <link rel="stylesheet" href="../review/styleReviw.css" />
     <title>Review | Javascript Vanilla | Projects Javascript</title>
   </head>
   <body>
+    <main>
+      <section class="container">
+        <!--Title-->
+        <div class="title">
+          <h2>Our Reviews</h2>
+          <div class="underline"></div>
+        </div>
+        <!--REVIEW-->
+        <article class="review">
+          <div class="img-container">
+            <figure>
+              <img
+                src="../review/assets/profileOne.jpg"
+                id="person-img"
+                alt="Person-Img"
+                title="Person-Img"
+              />
+              <figcaption>Person Image</figcaption>
+            </figure>
+          </div>
+          <h4 id="author">Harry Watson</h4>
+          <p id="job">UX Designer</p>
+          <p id="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+            Iste, doloremque nihil?
+          </p>
+
+          <!--Prev Next Button-->
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <!--Random Button-->
+          <button class="random-btn">Surprise me!</button>
+        </article>
+      </section>
+    </main>
+
+    <!--Javascript-->
     <script src="../review/appReviw.js"></script>
   </body>
 </html>
