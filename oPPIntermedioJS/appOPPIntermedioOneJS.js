@@ -24,6 +24,7 @@ const alma = {
 
   // Method >
   addCourse(newCourse) {
+    console.log("this", this);
     this.aproveCourses.push(newCourse);
   },
 };
@@ -37,5 +38,7 @@ console.log(Object.keys(alma));
 console.log(Object.getOwnPropertyNames(alma));
 //> entries > Convierte los Objetos a Arrays>>
 console.log(Object.entries(alma));
+// getOwnPropertyDescriptor> Objeto con propiedades / atributos => alma>
+console.log(Object.getOwnPropertyDescriptors(alma));
 
 console.groupEnd();

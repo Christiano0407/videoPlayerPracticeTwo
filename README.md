@@ -23,9 +23,21 @@ Platform Projects with Javascript Vanilla.
 > Prototypes
 
 - [Prototype Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+  > Keys
+- method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
+- [keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+  > getOwnPropertyNames
+- devuelve un array con todas las propiedades (numerables o no) encontradas en un objeto dado.
 - [getOwnPropertyNames](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+  > getOwnPropertyDescriptors
+- regresa como descripción de propiedad para una propiedad propia (eso es, una presente directamente en el objeto, no presente por la fuerza a través de la cadena de prototipo del objeto) de un objeto dado.
 - [getOwnPropertyDescriptors](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
+  > entries
+- devuelve una matriz de pares propios de una propiedad enumerable [key, value] de un objeto dado, en el mismo orden que es proporcionado por for...in (La diferencia es que un bucle for-in enumera las propiedades en la cadena de prototipos).
 - [entries](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+  > defineProperty
+- he static method Object.defineProperty() defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+- [defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
 # Build Javascript Projects
 
