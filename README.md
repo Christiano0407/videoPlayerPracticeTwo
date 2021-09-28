@@ -18,6 +18,15 @@ Platform Projects with Javascript Vanilla.
 - [Function Prototype_call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 - [Object_create](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill)
 
+## OPP Part Two
+
+> Prototypes
+
+- [Prototype Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [getOwnPropertyNames](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [getOwnPropertyDescriptors](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
+- [entries](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+
 # Build Javascript Projects
 
 - [Build Javascript Projects](https://www.youtube.com/watch?v=3PHXvlpOkf4&t=2651s)
