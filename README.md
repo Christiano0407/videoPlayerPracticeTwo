@@ -37,7 +37,14 @@ Platform Projects with Javascript Vanilla.
 - [entries](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
   > defineProperty
 - he static method Object.defineProperty() defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+- Object.defineProperty
+- Con esta propiedad se pueden definir nuevas propiedades a nuestro objeto. Así mismo, se puede configurar ciertas características de la propiedad tales como:
+- Configurable: Esta indica si la propiedad puede ser borrada o eliminada
+- Enumerable: Indica si la propiedad puede ser mostrada en la enumeración de las mismas. Existen ciertos métodos que toman como referencia este valor para mostrar la propiedad.
+- Writable: Esta indica si la propiedad puede ser modificada con el operador de asignación (=)
 - [defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+  > Symbol
+- [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 
 # Build Javascript Projects
 
