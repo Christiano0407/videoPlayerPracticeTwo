@@ -51,6 +51,11 @@ Platform Projects with Javascript Vanilla.
 - [freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
   > Symbol
 - [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+  > Shallow Copy in JS
+- method creates a new object, using an existing object as the prototype of the newly created object.
+- [Object Create](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+- method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
+- [Object assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
 # Build Javascript Projects
 
