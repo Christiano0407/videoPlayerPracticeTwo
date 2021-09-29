@@ -64,6 +64,9 @@ Platform Projects with Javascript Vanilla.
 - [JSON parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
   > Lectura JSON
 - [JSON](https://medium.com/@pmzubar/why-json-parse-json-stringify-is-a-bad-practice-to-clone-an-object-in-javascript-b28ac5e36521)
+  > Recursividad Javascript
+- [Recursividad PDF](https://www.uv.mx/personal/ocastillo/files/2011/04/Recursividad.pdf)
+- [Recursividad Article](https://infseg.com/informatica/recursividad-cuando-debo-utilizarla/)
 
 # Build Javascript Projects
 
