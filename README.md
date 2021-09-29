@@ -67,6 +67,8 @@ Platform Projects with Javascript Vanilla.
   > Recursividad Javascript
 - [Recursividad PDF](https://www.uv.mx/personal/ocastillo/files/2011/04/Recursividad.pdf)
 - [Recursividad Article](https://infseg.com/informatica/recursividad-cuando-debo-utilizarla/)
+  > Deep Copy con RTecursividad
+- [Deep Copy](https://medium.com/technofunnel/deep-and-shallow-copy-in-javascript-110f395330c5)
 
 # Build Javascript Projects
 
