@@ -142,8 +142,8 @@ Sidebar
   row-gap: 1rem;
   box-shadow: var(--clr-red-light);
   /*Animation*/
-  /* transition: var(--transition); */
-  /* transform: translate(-100%); */
+  transition: var(--transition);
+  transform: translate(-100%);
 }
 /*Agregar la clase desde javascript*/
 
@@ -169,8 +169,41 @@ Sidebar
 .close-btn.active {
   transform: scale(0.9);
 }
-
-.logo {
+figure {
+  justify-self: center;
   width: 40px;
   height: 40px;
+}
+.logo {
+  justify-self: center;
+  width: 40px;
+  height: 40px;
+}
+.links a {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: var(--clr-grey-5);
+
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.75rem;
+}
+.social-icons {
+  justify-self: center;
+  display: flex;
+  padding-bottom: 2rem;
+}
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+}
+.social-icons a:hover {
+  color: var(--clr-primary-1);
 }
