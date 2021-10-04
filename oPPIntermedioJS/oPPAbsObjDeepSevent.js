@@ -69,13 +69,13 @@ const studentBase = {
 };
 //==>>
 const luisa = deepCopy(studentBase);
-const rebeca = deepCopy(studentBase);
+const rebec = deepCopy(studentBase);
 // 1)
 //luisa["name"] = "Luisa";
 luisa.email = "Lui@gmail.com";
 luisa.socialMedia = { instagram: "@Luigi", twitter: "@Luisa91" };
 
-rebeca.name = "Rebeca Landa";
+rebec.name = "Rebeca Landa";
 
 //2)
 Object.defineProperty(luisa, "name", {
@@ -86,10 +86,14 @@ Object.defineProperty(luisa, "name", {
 });
 // == Con seal ya no es necesario defineProperty ==
 //No lo podemos borrar / Ningúna propiedad se puede borrar =>
-Object.seal(rebeca);
+Object.seal(rebec);
+Object.freeze(rebec);
+console.log(Object.isSealed(rebec)); // Verificar si todas las propiedades de configurable = están protegidas == true = protegido <<<<
+console.log(Object.isFrozen(rebec)); // Verificar si todas las propiedades de configurable / writable = están protegidas == true = protegido <<<<
 
 //>>> Call / Llamar >
 //console.log(studentBase);
 console.log(luisa);
-console.log(rebeca);
+console.log(rebec);
+
 console.groupEnd();
