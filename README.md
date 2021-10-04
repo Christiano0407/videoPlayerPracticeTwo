@@ -71,6 +71,14 @@ Platform Projects with Javascript Vanilla.
 - [Deep Copy](https://medium.com/technofunnel/deep-and-shallow-copy-in-javascript-110f395330c5)
   > RORO
 - [Js RORO](https://www.freecodecamp.org/news/elegant-patterns-in-modern-javascript-roro-be01e7669cbd/)
+  > Module Patterns
+- [Module Patterns js](https://javascript.plainenglish.io/data-hiding-with-javascript-module-pattern-62b71520bddd)
+  > Namespaces
+- [Namespaces](https://stackoverflow.com/questions/881515/how-do-i-declare-a-namespace-in-javascript)
+  > TypeError
+- [TypeError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_redefine_property)
+  > Closures
+- [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
 # Build Javascript Projects
 
