@@ -45,22 +45,35 @@ function createStudent({
     learningPaths,
     //Method >>
     // (D)
-    readName() {
+    /* readName() { */
+    /*   return private["_name"]; */
+    /* }, */
+    /* changeName(newName) { */
+    /*   private["_name"] = newName; */
+    /* }, */
+
+    //(G) Getters and Setters = remplazan a read y change>>>
+    get name() {
       return private["_name"];
     },
-    changeName(newName) {
-      private["_name"] = newName;
+    set name(newName) {
+      // Validación >
+      if (newName.length != 0) {
+        private["_name"] = newName;
+      } else {
+        console.error("Tu nombre debe de tener al menos un carácter");
+      }
     },
   };
-  // (E)
-  Object.defineProperty(public, "readName", {
-    writable: false, // evitar editar>
-    configurable: false, // Evitar Borrar>
-  });
-  Object.defineProperty(public, "changeName", {
-    writable: false,
-    configurable: false,
-  });
+  // (E) Proteger datos >>
+  /* Object.defineProperty(public, "readName", { */
+  /*   writable: false, // evitar editar> */
+  /*   configurable: false, // Evitar Borrar> */
+  /* }); */
+  /*  Object.defineProperty(public, "changeName", { */
+  /*    writable: false, */
+  /*    configurable: false, */
+  /*  }); */
 
   return public;
 }
@@ -71,11 +84,26 @@ const jennifer = createStudent({
   email: "Jenny@gmail.com",
 });
 
-//>>
-console.log(jennifer.readName());
-jennifer.changeName("Lorena");
-console.log(jennifer.readName());
+const katy = createStudent({
+  name: "Katy",
+  email: "Katy@gmail.com",
+});
+//>>>> Object / Properties / Methods>
+Object.seal(jennifer);
+Object.freeze(jennifer);
+console.log(Object.isSealed(jennifer));
+Object.isFrozen(jennifer);
+console.log(Object.getOwnPropertyDescriptors(jennifer));
+// >> getOwn => su Get: value / set:writable <<
+
+//>>>>>
+jennifer.name = "Lorena Cantú";
+console.log(jennifer.name);
 console.log(jennifer);
+//>
+katy.name = "Katy Perry";
+console.log(katy.name);
+console.log(katy);
 
 // Recurda el POLIMORFISMO ===>>>>>
 
