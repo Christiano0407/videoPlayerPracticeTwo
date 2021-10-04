@@ -69,6 +69,8 @@ Platform Projects with Javascript Vanilla.
 - [Recursividad Article](https://infseg.com/informatica/recursividad-cuando-debo-utilizarla/)
   > Deep Copy con RTecursividad
 - [Deep Copy](https://medium.com/technofunnel/deep-and-shallow-copy-in-javascript-110f395330c5)
+  > RORO
+- [Js RORO](https://www.freecodecamp.org/news/elegant-patterns-in-modern-javascript-roro-be01e7669cbd/)
 
 # Build Javascript Projects
 
