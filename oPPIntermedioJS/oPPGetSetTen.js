@@ -88,6 +88,8 @@ const katy = createStudent({
   name: "Katy",
   email: "Katy@gmail.com",
 });
+
+// (H)
 //>>>> Object / Properties / Methods>
 Object.seal(jennifer);
 Object.freeze(jennifer);
