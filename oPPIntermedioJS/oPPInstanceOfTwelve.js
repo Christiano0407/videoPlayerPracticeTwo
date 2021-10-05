@@ -43,19 +43,6 @@ function Student({
   learningPaths = [],
   // = {} = Todo lo que no tiene un argumento, es un Objeto Vacío.
 } = {}) {
-  // (K)
-  if (!isArray(learningPaths)) {
-    console.error("LearningPaths, no es un Array");
-    return;
-  }
-
-  for (LearningPathIndex in learningPaths) {
-    if (!learningPaths[LearningPathIndex] instanceof LearningPath) {
-      console.Error("LearningPath, no es un ArraY");
-      return;
-    }
-  }
-
   //(J)
   this.name = name;
   this.email = email;
@@ -69,7 +56,25 @@ function Student({
     twitch,
   }),
     (this.approveCourses = approveCourses);
-  this.learningPaths = learningPaths;
+  // (K)
+
+  /*  if (!isArray(learningPaths)) { */
+  /*    console.error("LearningPaths, no es un Array"); */
+  /*    return; */
+  /*  } */
+  // Tenemos que validar >>>
+  if (isArray(learningPaths)) {
+    this.learningPaths = [];
+
+    for (LearningPathIndex in learningPaths) {
+      console.log(learningPaths[LearningPathIndex]);
+      console.log(learningPaths[LearningPathIndex] instanceof LearningPath);
+
+      if (learningPaths[LearningPathIndex] instanceof LearningPath) {
+        this.learningPaths.push(learningPaths[LearningPathIndex]);
+      }
+    }
+  }
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
