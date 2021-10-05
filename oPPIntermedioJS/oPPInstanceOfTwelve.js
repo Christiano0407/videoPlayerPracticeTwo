@@ -1,46 +1,31 @@
 console.log("Instance Of | Javascript Vanilla | OPP");
+// Recuerda: Prototype / This y New << / Los carácteres principales>>
+// >>> =========================================================================================================== <<<
 // (B)
 // Invocar un error=> Cuando necesitamos Datos Obligatorios ==>
 function requiredParameter(param) {
   throw new Error(param + " Es obligatorio");
 }
 
+// ARRAY>
+function isArray(subject) {
+  return Array.isArray(subject);
+}
+// Object>
+function isObject(subject) {
+  //typeOf = Tipo de valor>
+  return typeof subject == "object";
+}
+
 //(I) Duck Typing
-function createLearningPaths({
-  name = requiredParameter("name"),
-  courses = [],
-} = {}) {
-  const private = {
-    _name: name,
-    _courses: courses,
-  };
-
-  const public = {
-    // Methods>
-    get name() {
-      return private["_name"];
-    },
-
-    set name(newName) {
-      if (newName.length != 0) {
-        private["_name"] = newName;
-      } else {
-        console.error(
-          "Es necesario que cumplas con el requerimiento mencionado"
-        );
-      }
-    },
-    // (J)
-    get courses() {
-      return private("_courses");
-    },
-  };
-
-  return public;
+function LearningPath({ name = requiredParameter("name"), courses = [] } = {}) {
+  //(J) Parameters / prototype>>
+  this.name = name;
+  this.courses = courses;
 }
 
 // (A)
-function createStudent({
+function Student({
   // Agregamos unas llaves para que sea un Object>>
   // PARÁMETROS =
   // Mandar argumentos (= []) = Cuando no mandamos datos >>
@@ -58,109 +43,89 @@ function createStudent({
   learningPaths = [],
   // = {} = Todo lo que no tiene un argumento, es un Objeto Vacío.
 } = {}) {
-  // (C)
-  const private = {
-    _name: name,
-    _learningPaths: learningPaths,
-  };
+  // (K)
+  if (!isArray(learningPaths)) {
+    console.error("LearningPaths, no es un Array");
+    return;
+  }
 
-  const public = {
-    email,
-    socialMedia: {
-      twitter,
-      instagram,
-      facebook,
-      tiktok,
-      linkedin,
-      youtube,
-      twitch,
-    },
-    approveCourses,
-    //Method >>
-    // (D)
-    //(G) Getters and Setters = remplazan a read y change>>>
-    get name() {
-      return private["_name"];
-    },
-    set name(newName) {
-      // Validación >
-      if (newName.length != 0) {
-        private["_name"] = newName;
-      } else {
-        console.error("Tu nombre debe de tener al menos un carácter");
-      }
-    },
-    // (K) Duck Typing
-    get learningPaths() {
-      return private["_learningPaths"];
-    },
-    set learningPaths(newLp) {
-      // Validación >
-      if (!newLp.name) {
-        console.error("Tu Learning Path, no tiene nombre");
-        return;
-      }
+  for (LearningPathIndex in learningPaths) {
+    if (!learningPaths[LearningPathIndex] instanceof LearningPath) {
+      console.Error("LearningPath, no es un ArraY");
+      return;
+    }
+  }
 
-      if (!isArray.courses) {
-        console.error("Tu Learning Paths, no existe");
-        return;
-      }
-
-      if (!isArray(newLp.courses)) {
-        console.error("Tu Learning Path, no tiene Cursos");
-        return;
-      }
-
-      private["_learningPaths"].push(newLp);
-    },
-  };
-  // (E) Proteger datos >>
-
-  return public;
+  //(J)
+  this.name = name;
+  this.email = email;
+  (this.socialMedia = {
+    twitter,
+    instagram,
+    tiktok,
+    facebook,
+    youtube,
+    linkedin,
+    twitch,
+  }),
+    (this.approveCourses = approveCourses);
+  this.learningPaths = learningPaths;
 }
 
-// >>>>>>
-const jennifer = createStudent({
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//>> LearningPath
+const webSchool = new LearningPath({
+  name: "webDesignSystemSchool",
+  courses: [],
+});
+webSchool.courses = [
+  "Course Web System Design",
+  "Course CSS GRID",
+  "Course Design with Adobe",
+];
+
+const schoolWebDesign = new LearningPath({
+  name: "School Web Design",
+  courses: [],
+});
+schoolWebDesign.courses = [
+  "Course Figma",
+  "Course AdobeXD",
+  "Course Design System",
+  "Course Layout System",
+];
+
+const schoolIA = new LearningPath({
+  name: "School Artificial Intelligence",
+  courses: [],
+});
+
+schoolIA.courses = [
+  "Course Basic Paython",
+  "Course Redes Neurológicas",
+  "Course Python avanzado",
+];
+//>>>
+const jennifer = new Student({
   name: "Jennifer",
   email: "Jenny@gmail.com",
+  learningPaths: [schoolIA],
 });
 
-const katy = createStudent({
+const katy = new Student({
   name: "Katy",
   email: "Katy@gmail.com",
+  learningPaths: [webSchool, schoolWebDesign],
 });
 
-const natalia = createStudent({
-  name: "Natalia",
-  email: "naty@gmail.com",
-  learningPaths: {
-    name: "Escuela de Desarrollo Web",
-    courses: ["Curso Básico de Programación"],
-  },
-});
-
-// (H)
-//>>>> Object / Properties / Methods>
-Object.seal(jennifer);
-Object.freeze(jennifer);
-console.log(Object.isSealed(jennifer));
-Object.isFrozen(jennifer);
-console.log(Object.getOwnPropertyDescriptors(jennifer));
-// >> getOwn => su Get: value / set:writable <<
-
-//>>>>>
-jennifer.name = "Lorena Cantú";
-console.log(jennifer.name);
+// >>>>> Nuevo protoipo (Jennifer) es una instancia (instanceOf) del prototype Student = Validación <<<
+console.log(jennifer instanceof Student);
 console.log(jennifer);
 //>
-katy.name = "Katy Perry";
-console.log(katy.name);
 console.log(katy);
-
 //>>
-//console.log(createLearningPaths);
-/* natalia.learningPaths.name = "Nueva Ruta de learnign Paths"; */
-console.log(natalia.learningPaths);
-console.log(natalia);
+console.log(webSchool);
+console.log(schoolWebDesign);
 
 console.groupEnd();
