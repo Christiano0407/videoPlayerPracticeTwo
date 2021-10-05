@@ -79,6 +79,18 @@ Platform Projects with Javascript Vanilla.
 - [TypeError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_redefine_property)
   > Closures
 - [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+  > Object Prototype
+- [Object Prototype](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+  > Instance Of
+- [instanceOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+  > New Keyword in Javascript / Article
+- [Keywords](https://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript)
+  > Keyword Two / Article
+- [Keyword_Two](https://igorluczko.medium.com/the-new-keyword-in-javascript-f448b932eea8)
+  > Prototype Call
+- [protoype Call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+  > Why I don’t use the javascript “new” keyword / aRTICLE
+- [Keyword_Three/Do not](https://www.liip.ch/en/blog/why-i-dont-use-the-javascript-new-keyword)
 
 # Build Javascript Projects
 
