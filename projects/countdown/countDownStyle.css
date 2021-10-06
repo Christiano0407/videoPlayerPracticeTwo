@@ -75,8 +75,50 @@ h4 {
   letter-spacing: 0.1rem;
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  /*  margin-bottom: 0.75rem; */
 }
 body {
   font-family: "Roboto", sans-serif;
+  background-image: url(../countdown/Assets/1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+h1 {
+  font-weight: 700;
+  font-size: 8rem;
+  /*   margin-top: 5rem; */
+  color: #fff;
+}
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  /* border: 4px solid #fff; */
+  /*  padding: 1rem; */
+  /* border-radius: 1rem; */
+}
+.big-text {
+  font-weight: bold;
+  font-size: 10rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+  color: #fff;
+}
+.countdown-el {
+  text-align: center;
+}
+.countdown-el span {
+  font-size: 2.3rem;
+  color: #fff;
 }
