@@ -5,16 +5,22 @@ const hourEl = document.getElementById(`hours`);
 const minsEl = document.getElementById(`mins`);
 const secondsEl = document.getElementById(`seconds`);
 
-const newYears = `7 Oct 2021`;
+const newYears = `1 Jan 2022`;
 // ===========================>>>
 countdown = () => {
   //(B)
-  const newYearDate = new Date(newYears);
-  const currentDate = new Date();
+  const newYearDate = new Date(newYears).getTime();
+  const currentDate = new Date().getTime();
+  // current(Actual)>
+  //console.log(newYearDate); = Ver el transcurrir del tiempo>>
+  //console.log(currentDate);
 
   // (A)
   const totalSeconds = (newYearDate - currentDate) / 1000;
 
+  // 1000 Milisegundos en un segundo >>
+  // 3600 Milisegundo que tiene un día.
+  // 1440 min = day.
   // (C)
   const days = Math.floor(totalSeconds / 3600 / 24);
   const hours = Math.floor(totalSeconds / 3600) % 24;
@@ -36,6 +42,7 @@ countdown = () => {
 countdown();
 
 //(F)
+// 1000 = Temporizador (ejecutar)>>>
 setInterval(countdown, 1000);
 
 console.groupEnd();
