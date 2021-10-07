@@ -113,6 +113,10 @@ Platform Projects with Javascript Vanilla.
 - [10 project Javascript / florin pop](https://www.youtube.com/channel/UCeU-1X402kT-JlLdAitxSMA)
   > DrawingApp
 - [DrawingApp](https://www.w3schools.com/tags/canvas_arc.asp)
+  > Mouse offsetX
+- desplazamiento en la coordenada X del puntero del mouse entre ese evento y el borde de relleno del nodo de destino.
+  > Mouse offsetY
+- La offsetYpropiedad de solo lectura de la MouseEventinterfaz proporciona el desplazamiento en la coordenada Y del puntero del mouse entre ese evento y el borde de relleno del nodo de destino.
 
 # MIT LICENSE
 
