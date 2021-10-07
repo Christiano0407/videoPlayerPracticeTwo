@@ -6,7 +6,8 @@ console.group("Drawing-app");
 const canvas = document.getElementById(`canvas`);
 const ctx = canvas.getContext(`2d`);
 // VARIABLES
-const decreaseBtn = document.getElementById(`increase`);
+const increaseBtn = document.getElementById(`increase`);
+const decreaseBtn = document.getElementById(`decrease`);
 const sizeEl = document.getElementById(`size`);
 const colorEl = document.getElementById(`color`); //INPUT
 const clearEl = document.getElementById(`clear`);
@@ -16,8 +17,8 @@ const clearEl = document.getElementById(`clear`);
 let size = 30;
 let isPressed = false; // Presionado / click>>
 let color = "#000000";
-let x = 50; // Undefined>
-let y = 50; // Undefined>
+let x = undefined; // Undefined>
+let y = undefined; // Undefined>
 
 //(A)>
 canvas.addEventListener(`mousedown`, (e) => {
@@ -27,7 +28,12 @@ canvas.addEventListener(`mousedown`, (e) => {
   y = e.offsetY;
 });
 // (E)>
-canvas.addEventListener(`mouseup`, (e) => {});
+canvas.addEventListener(`mouseup`, (e) => {
+  isPressed = false;
+
+  x = undefined;
+  y = undefined;
+});
 // (F)>
 canvas.addEventListener(`mousemove`, (e) => {
   if (isPressed) {
@@ -70,6 +76,43 @@ drawLine = (x1, y1, x2, y2) => {
 /* } */
 /* draw(); */
 
+// (3)>>
 // (G)>
+increaseBtn.addEventListener(`click`, () => {
+  size += 5;
 
+  if (size > 50) {
+    size = 50;
+  }
+
+  updateSizeOnScreen();
+});
+
+decreaseBtn.addEventListener(`click`, () => {
+  //console.log("Hola");
+  size -= 5;
+
+  if (size < 5) {
+    size = 5;
+  }
+
+  updateSizeOnScreen();
+});
+
+// (I)>
+// Cambiar el color>>
+colorEl.addEventListener("change", (e) => {
+  color = e.target.value;
+});
+//(J)>
+// Clear / Limpiar >>
+clearEl.addEventListener(`click`, () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+// (H)
+updateSizeOnScreen = () => {
+  // Tamaño del pincel>>
+  sizeEl.innerText = size;
+};
 console.groupEnd();
