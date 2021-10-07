@@ -92,7 +92,7 @@ body {
 
 /*Canvas*/
 #canvas {
-  border: 4px solid rebeccapurple;
+  border: 10px solid rebeccapurple;
   border-radius: 1rem;
 }
 /*Toolbox*/
