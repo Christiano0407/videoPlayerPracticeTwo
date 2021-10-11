@@ -1,0 +1,70 @@
+/*
+=============== 
+Variables / COMPONENTS > 
+===============
+*/
+
+/*
+=============== 
+Variables / root > 
+===============
+*/
+:root {
+  /*Color Base*/
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-primary: hsl(205, 85%, 17%);
+  --clr-primary-1: hsl(205, 75%, 60%);
+  /* dark / light shades of primary color*/
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /*Max width / fixed*/
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  /*Height Fonts*/
+  --font-size-small: 1.4rem;
+  --font-size-medium: 1.6rem;
+  --font-size-Tall: 1.8rem;
+  --font-size-Title: 2.4rem;
+}
+
+/*
+=============== 
+Global / Variables> 
+===============
+*/
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+body {
+  /*max-width o min-width*/
+  width: 100%;
+  /*min-height o max-height*/
+}
