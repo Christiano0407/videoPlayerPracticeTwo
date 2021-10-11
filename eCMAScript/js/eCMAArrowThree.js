@@ -21,7 +21,7 @@ let listOfNames = names.map(function (item, index) {
   console.log(item.name, index);
 });
 // ECMA6>>>
-// Arrow Functions en variables/method>>>>>>>>>>>>>>
+// Arrow Functions en variables/method>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //(1)
 let listOfNamesTwo = names.map((item, index) => console.log(item.name, index));
 
@@ -44,6 +44,36 @@ const listOfNamesFour = (name) => {
 const square = (num) => num * num;
 console.log(square(5));
 
-// Promesas / Promise ================================
+// Promesas / Promise ======================================================================================
+// (1)
+const hello = () => {
+  // Ejecutar Promesa >
+  return new Promise((resolve, reject) => {
+    //code>
+    if (true) {
+      resolve(`Hello Resolved`);
+    } else {
+      reject(`No!!!!!`);
+    }
+  });
+};
+//EJECUTAR PROMESA=>
+hello()
+  .then((response) => console.log(response))
+  .catch((error) => console.error(error));
+//> EXERCISE:
+const friend = (one) => {
+  return new Promise((resolve, reject) => {
+    if (one === "Alma") {
+      true;
+      resolve(`Yes! I´ts she!!!`);
+    } else {
+      reject(`Sólo es un sueño`);
+    }
+  });
+};
+friend("Alma")
+  .then((response) => console.log(response))
+  .catch((error) => console.error(error));
 
 console.groupEnd();
