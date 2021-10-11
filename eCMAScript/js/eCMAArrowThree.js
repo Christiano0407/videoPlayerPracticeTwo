@@ -22,22 +22,25 @@ let listOfNames = names.map(function (item, index) {
 });
 // ECMA6>>>
 // Arrow Functions en variables/method>>>>>>>>>>>>>>
+//(1)
 let listOfNamesTwo = names.map((item, index) => console.log(item.name, index));
 
-// (C)>
-peopleTwo = () => {};
+// (C)> (2)
+peopleTwo = (user) => {
+  return user;
+};
 
 const peopleThree = (name) => {
   return name;
 };
 console.log(peopleThree("Aníbal"));
 
-// (D)>
+// (D)> (3)
 const listOfNamesFour = (name) => {
   //Code
 };
 
-// (E)>
+// (E)> (4)
 const square = (num) => num * num;
 console.log(square(5));
 
